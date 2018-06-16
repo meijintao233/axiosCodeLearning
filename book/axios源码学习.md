@@ -3,7 +3,7 @@
 
 #### axios的核心代码在lib/core/、lib/adapters/、lib/cancel/、lib/axios.js、lib/defaults中。
 
-```
+```javascript
     //lib/core/Axios.js
     
     //axios的构造函数，
@@ -18,7 +18,7 @@
     }
 ```
 
-```
+```javascript
 //Axios原型中的request函数，这是axios发起请求时使用的函数
 //config就是Axios内部传递信息的载体
 Axios.prototype.request = function request(config) {
@@ -75,7 +75,7 @@ Axios.prototype.request = function request(config) {
 
 #### 接下来就是拦截器管理的模块，主要有三个功能，use方法注册拦截器，eject方法移除拦截器，forEach方法遍历执行handlers中的元素
 
-```
+```javascript
 //lib/core/InterceptorManager.js
 
 //把handlers挂载在InterceptorManager的实例中
@@ -112,7 +112,7 @@ InterceptorManager.prototype.forEach = function forEach(fn) {
 
 
 
-```
+```javascript
 //lib/core/dispatchRequest.js
 
 function throwIfCancellationRequested(config) {
